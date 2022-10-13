@@ -25,6 +25,9 @@ public class Mars_Furniture_Mod implements ModInitializer {
 	public static final TableBlock ACACIA_TABLE = new TableBlock(FabricBlockSettings.of(Material.WOOD));
 	public static final ChairBlock ACACIA_CHAIR = new ChairBlock(FabricBlockSettings.of(Material.WOOD));
 
+	//BIRCH
+	public static final TableBlock BIRCH_TABLE = new TableBlock(FabricBlockSettings.of(Material.WOOD));
+
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
@@ -35,6 +38,9 @@ public class Mars_Furniture_Mod implements ModInitializer {
 
 		Registry.register(Registry.BLOCK, new Identifier("mars_furniture_mod", "acacia_chair"), ACACIA_CHAIR);
         Registry.register(Registry.ITEM, new Identifier("mars_furniture_mod", "acacia_chair"), new BlockItem(ACACIA_CHAIR, new Item.Settings().group(ItemGroup.DECORATIONS)));
+
+		Registry.register(Registry.BLOCK, new Identifier("mars_furniture_mod", "birch_table"), BIRCH_TABLE);
+        Registry.register(Registry.ITEM, new Identifier("mars_furniture_mod", "birch_table"), new BlockItem(BIRCH_TABLE, new Item.Settings().group(ItemGroup.DECORATIONS)));
 
 		LOGGER.info("Hello Fabric world!");
 	}
