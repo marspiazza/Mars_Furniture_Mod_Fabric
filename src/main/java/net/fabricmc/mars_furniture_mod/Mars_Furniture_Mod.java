@@ -2,6 +2,7 @@ package net.fabricmc.mars_furniture_mod;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.mars_furniture_mod.block.custom.ChairBlock;
 import net.fabricmc.mars_furniture_mod.block.custom.TableBlock;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
@@ -22,6 +23,7 @@ public class Mars_Furniture_Mod implements ModInitializer {
 	//BLOCKS
 	//ACACIA
 	public static final TableBlock ACACIA_TABLE = new TableBlock(FabricBlockSettings.of(Material.WOOD));
+	public static final ChairBlock ACACIA_CHAIR = new ChairBlock(FabricBlockSettings.of(Material.WOOD));
 
 	@Override
 	public void onInitialize() {
@@ -29,8 +31,10 @@ public class Mars_Furniture_Mod implements ModInitializer {
 
 		//ACACIA
 		Registry.register(Registry.BLOCK, new Identifier("mars_furniture_mod", "acacia_table"), ACACIA_TABLE);
-        Registry.register(Registry.ITEM, new Identifier("mars_furniture_mod", "acacia_table"), new BlockItem(ACACIA_TABLE, new Item.Settings().group(ItemGroup.MISC)));
+        Registry.register(Registry.ITEM, new Identifier("mars_furniture_mod", "acacia_table"), new BlockItem(ACACIA_TABLE, new Item.Settings().group(ItemGroup.DECORATIONS)));
 
+		Registry.register(Registry.BLOCK, new Identifier("mars_furniture_mod", "acacia_chair"), ACACIA_CHAIR);
+        Registry.register(Registry.ITEM, new Identifier("mars_furniture_mod", "acacia_chair"), new BlockItem(ACACIA_CHAIR, new Item.Settings().group(ItemGroup.DECORATIONS)));
 
 		LOGGER.info("Hello Fabric world!");
 	}
