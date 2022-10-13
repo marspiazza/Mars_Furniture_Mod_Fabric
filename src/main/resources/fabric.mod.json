@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "mars_furniture_mod",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Mars Furniture Mod",
+  "description": "Adds tons of new decorations and furniture!",
   "authors": [
-    "Me!"
+    "Caterpillar Pants"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
@@ -19,11 +19,11 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "net.fabricmc.mars_furniture_mod.Mars_Furniture_Mod"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "mars_furniture_mod.mixins.json"
   ],
 
   "depends": {
