@@ -1,10 +1,12 @@
 package net.fabricmc.mars_furniture_mod;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.mars_furniture_mod.block.custom.ChairBlock;
 import net.fabricmc.mars_furniture_mod.block.custom.TableBlock;
 import net.minecraft.block.Material;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -23,10 +25,12 @@ public class Mars_Furniture_Mod implements ModInitializer {
 	//BLOCKS
 	//ACACIA
 	public static final TableBlock ACACIA_TABLE = new TableBlock(FabricBlockSettings.of(Material.WOOD));
-	public static final ChairBlock ACACIA_CHAIR = new ChairBlock(FabricBlockSettings.of(Material.WOOD));
+	public static final ChairBlock ACACIA_CHAIR = new ChairBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque());
 
 	//BIRCH
 	public static final TableBlock BIRCH_TABLE = new TableBlock(FabricBlockSettings.of(Material.WOOD));
+	public static final ChairBlock BIRCH_CHAIR = new ChairBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque());
+
 
 	@Override
 	public void onInitialize() {
@@ -38,9 +42,16 @@ public class Mars_Furniture_Mod implements ModInitializer {
 
 		Registry.register(Registry.BLOCK, new Identifier("mars_furniture_mod", "acacia_chair"), ACACIA_CHAIR);
         Registry.register(Registry.ITEM, new Identifier("mars_furniture_mod", "acacia_chair"), new BlockItem(ACACIA_CHAIR, new Item.Settings().group(ItemGroup.DECORATIONS)));
+		BlockRenderLayerMap.INSTANCE.putBlock(Mars_Furniture_Mod.ACACIA_CHAIR, RenderLayer.getCutout());
+
 
 		Registry.register(Registry.BLOCK, new Identifier("mars_furniture_mod", "birch_table"), BIRCH_TABLE);
         Registry.register(Registry.ITEM, new Identifier("mars_furniture_mod", "birch_table"), new BlockItem(BIRCH_TABLE, new Item.Settings().group(ItemGroup.DECORATIONS)));
+		
+		Registry.register(Registry.BLOCK, new Identifier("mars_furniture_mod", "birch_chair"), BIRCH_CHAIR);
+        Registry.register(Registry.ITEM, new Identifier("mars_furniture_mod", "birch_chair"), new BlockItem(BIRCH_CHAIR, new Item.Settings().group(ItemGroup.DECORATIONS)));
+		BlockRenderLayerMap.INSTANCE.putBlock(Mars_Furniture_Mod.BIRCH_CHAIR, RenderLayer.getCutout());
+
 
 		LOGGER.info("Hello Fabric world!");
 	}

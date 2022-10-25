@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "mars_furniture_mod:block/birch_chair"},
+        "facing=east":  { "model": "mars_furniture_mod:block/birch_chair", "y": 90},
+        "facing=south": { "model": "mars_furniture_mod:block/birch_chair", "y": 180},
+        "facing=west":  { "model": "mars_furniture_mod:block/birch_chair", "y": 270}
+    }
+}
