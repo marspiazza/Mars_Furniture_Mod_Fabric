@@ -35,6 +35,11 @@ public class Mars_Furniture_Mod implements ModInitializer {
 	public static final ChairBlock CRIMSON_CHAIR = new ChairBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque());
 	public static final TableBlock CRIMSON_TABLE = new TableBlock(FabricBlockSettings.of(Material.WOOD));
 
+	//DARK OAK
+	public static final ChairBlock DARK_OAK_CHAIR = new ChairBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque());
+	public static final TableBlock DARK_OAK_TABLE = new TableBlock(FabricBlockSettings.of(Material.WOOD));
+
+
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
@@ -62,6 +67,15 @@ public class Mars_Furniture_Mod implements ModInitializer {
 		Registry.register(Registry.BLOCK, new Identifier("mars_furniture_mod", "crimson_chair"), CRIMSON_CHAIR);
         Registry.register(Registry.ITEM, new Identifier("mars_furniture_mod", "crimson_chair"), new BlockItem(CRIMSON_CHAIR, new Item.Settings().group(ItemGroup.DECORATIONS)));
 		BlockRenderLayerMap.INSTANCE.putBlock(Mars_Furniture_Mod.CRIMSON_CHAIR, RenderLayer.getCutout());
+
+		//DARK OAK
+		Registry.register(Registry.BLOCK, new Identifier("mars_furniture_mod", "dark_oak_table"), DARK_OAK_TABLE);
+        Registry.register(Registry.ITEM, new Identifier("mars_furniture_mod", "dark_oak_table"), new BlockItem(DARK_OAK_TABLE, new Item.Settings().group(ItemGroup.DECORATIONS)));
+
+		Registry.register(Registry.BLOCK, new Identifier("mars_furniture_mod", "dark_oak_chair"), DARK_OAK_CHAIR);
+        Registry.register(Registry.ITEM, new Identifier("mars_furniture_mod", "dark_oak_chair"), new BlockItem(DARK_OAK_CHAIR, new Item.Settings().group(ItemGroup.DECORATIONS)));
+		BlockRenderLayerMap.INSTANCE.putBlock(Mars_Furniture_Mod.DARK_OAK_CHAIR, RenderLayer.getCutout());
+
 
 
 		LOGGER.info("Hello Fabric world!");
