@@ -24,7 +24,7 @@ public class ChairBlock extends HorizontalFacingBlock {
     }
 
     //NORTH FACING VOXEL SHAPE
-    private static final VoxelShape SHAPE_N = Stream.of(
+    private static final VoxelShape SHAPE_S = Stream.of(
         Block.createCuboidShape(12, 0, 1, 14, 7, 3),
         Block.createCuboidShape(2, 0, 13, 4, 7, 15),
         Block.createCuboidShape(2, 0, 1, 4, 7, 3),
@@ -34,7 +34,7 @@ public class ChairBlock extends HorizontalFacingBlock {
         ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
 
     //SOUTH FACING VOXEL SHAPE
-    private static final VoxelShape SHAPE_S = Stream.of(
+    private static final VoxelShape SHAPE_N = Stream.of(
         Block.createCuboidShape(2, 0, 13, 4, 7, 15),
         Block.createCuboidShape(12, 0, 1, 14, 7, 3),
         Block.createCuboidShape(12, 0, 13, 14, 7, 15),
@@ -44,7 +44,7 @@ public class ChairBlock extends HorizontalFacingBlock {
         ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
 
     //EAST FACING VOXEL SHAPE
-    private static final VoxelShape SHAPE_E = Stream.of(
+    private static final VoxelShape SHAPE_W = Stream.of(
         Block.createCuboidShape(13, 0, 12, 15, 7, 14),
         Block.createCuboidShape(1, 0, 2, 3, 7, 4),
         Block.createCuboidShape(13, 0, 2, 15, 7, 4),
@@ -54,7 +54,7 @@ public class ChairBlock extends HorizontalFacingBlock {
         ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
 
     //WEST FACING VOXEL SHAPE
-    private static final VoxelShape SHAPE_W = Stream.of(
+    private static final VoxelShape SHAPE_E = Stream.of(
         Block.createCuboidShape(1, 0, 2, 3, 7, 4),
         Block.createCuboidShape(13, 0, 12, 15, 7, 14),
         Block.createCuboidShape(1, 0, 12, 3, 7, 14),
