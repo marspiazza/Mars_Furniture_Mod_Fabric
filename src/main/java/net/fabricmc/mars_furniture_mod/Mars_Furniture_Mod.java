@@ -31,6 +31,9 @@ public class Mars_Furniture_Mod implements ModInitializer {
 	public static final TableBlock BIRCH_TABLE = new TableBlock(FabricBlockSettings.of(Material.WOOD));
 	public static final ChairBlock BIRCH_CHAIR = new ChairBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque());
 
+	//CRIMSON
+	public static final ChairBlock CRIMSON_CHAIR = new ChairBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque());
+	public static final TableBlock CRIMSON_TABLE = new TableBlock(FabricBlockSettings.of(Material.WOOD));
 
 	@Override
 	public void onInitialize() {
@@ -44,13 +47,21 @@ public class Mars_Furniture_Mod implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier("mars_furniture_mod", "acacia_chair"), new BlockItem(ACACIA_CHAIR, new Item.Settings().group(ItemGroup.DECORATIONS)));
 		BlockRenderLayerMap.INSTANCE.putBlock(Mars_Furniture_Mod.ACACIA_CHAIR, RenderLayer.getCutout());
 
-
+		//BIRCH
 		Registry.register(Registry.BLOCK, new Identifier("mars_furniture_mod", "birch_table"), BIRCH_TABLE);
         Registry.register(Registry.ITEM, new Identifier("mars_furniture_mod", "birch_table"), new BlockItem(BIRCH_TABLE, new Item.Settings().group(ItemGroup.DECORATIONS)));
 		
 		Registry.register(Registry.BLOCK, new Identifier("mars_furniture_mod", "birch_chair"), BIRCH_CHAIR);
         Registry.register(Registry.ITEM, new Identifier("mars_furniture_mod", "birch_chair"), new BlockItem(BIRCH_CHAIR, new Item.Settings().group(ItemGroup.DECORATIONS)));
 		BlockRenderLayerMap.INSTANCE.putBlock(Mars_Furniture_Mod.BIRCH_CHAIR, RenderLayer.getCutout());
+
+		//CRIMSON
+		Registry.register(Registry.BLOCK, new Identifier("mars_furniture_mod", "crimson_table"), CRIMSON_TABLE);
+        Registry.register(Registry.ITEM, new Identifier("mars_furniture_mod", "crimson_table"), new BlockItem(CRIMSON_TABLE, new Item.Settings().group(ItemGroup.DECORATIONS)));
+
+		Registry.register(Registry.BLOCK, new Identifier("mars_furniture_mod", "crimson_chair"), CRIMSON_CHAIR);
+        Registry.register(Registry.ITEM, new Identifier("mars_furniture_mod", "crimson_chair"), new BlockItem(CRIMSON_CHAIR, new Item.Settings().group(ItemGroup.DECORATIONS)));
+		BlockRenderLayerMap.INSTANCE.putBlock(Mars_Furniture_Mod.CRIMSON_CHAIR, RenderLayer.getCutout());
 
 
 		LOGGER.info("Hello Fabric world!");
