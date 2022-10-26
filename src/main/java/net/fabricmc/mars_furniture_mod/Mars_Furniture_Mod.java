@@ -47,6 +47,10 @@ public class Mars_Furniture_Mod implements ModInitializer {
 	public static final ChairBlock MANGROVE_CHAIR = new ChairBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque());
 	public static final TableBlock MANGROVE_TABLE = new TableBlock(FabricBlockSettings.of(Material.WOOD));
 
+	//OAK
+	public static final ChairBlock OAK_CHAIR = new ChairBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque());
+	public static final TableBlock OAK_TABLE = new TableBlock(FabricBlockSettings.of(Material.WOOD));
+
 
 	@Override
 	public void onInitialize() {
@@ -99,6 +103,15 @@ public class Mars_Furniture_Mod implements ModInitializer {
 		Registry.register(Registry.BLOCK, new Identifier("mars_furniture_mod", "mangrove_chair"), MANGROVE_CHAIR);
         Registry.register(Registry.ITEM, new Identifier("mars_furniture_mod", "mangrove_chair"), new BlockItem(MANGROVE_CHAIR, new Item.Settings().group(ItemGroup.DECORATIONS)));
 		BlockRenderLayerMap.INSTANCE.putBlock(Mars_Furniture_Mod.MANGROVE_CHAIR, RenderLayer.getCutout());
+
+		//OAK
+		Registry.register(Registry.BLOCK, new Identifier("mars_furniture_mod", "oak_table"), OAK_TABLE);
+        Registry.register(Registry.ITEM, new Identifier("mars_furniture_mod", "oak_table"), new BlockItem(OAK_TABLE, new Item.Settings().group(ItemGroup.DECORATIONS)));
+
+		Registry.register(Registry.BLOCK, new Identifier("mars_furniture_mod", "oak_chair"), OAK_CHAIR);
+        Registry.register(Registry.ITEM, new Identifier("mars_furniture_mod", "oak_chair"), new BlockItem(OAK_CHAIR, new Item.Settings().group(ItemGroup.DECORATIONS)));
+		BlockRenderLayerMap.INSTANCE.putBlock(Mars_Furniture_Mod.OAK_CHAIR, RenderLayer.getCutout());
+
 		LOGGER.info("Hello Fabric world!");
 	}
 }

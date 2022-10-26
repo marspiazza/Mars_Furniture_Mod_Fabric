@@ -3,5 +3,14 @@
     "block.mars_furniture_mod.acacia_chair": "Acacia Chair",
     "block.mars_furniture_mod.birch_table": "Birch Table",
     "block.mars_furniture_mod.birch_chair": "Birch Chair",
-    "block.mars_furniture_mod.crimson_chair": "Crimson Chair"
+    "block.mars_furniture_mod.crimson_chair": "Crimson Chair",
+    "block.mars_furniture_mod.crimson_table": "Crimson Table",
+    "block.mars_furniture_mod.dark_oak_chair": "Dark Oak Chair",
+    "block.mars_furniture_mod.dark_oak_table": "Dark Oak Table",
+    "block.mars_furniture_mod.jungle_chair": "Jungle Chair",
+    "block.mars_furniture_mod.jungle_table": "Jungle Table",
+    "block.mars_furniture_mod.mangrove_chair": "Mangrove Chair",
+    "block.mars_furniture_mod.mangrove_table": "Mangrove Table",
+    "block.mars_furniture_mod.oak_chair": "Oak Chair",
+    "block.mars_furniture_mod.oak_table": "Oak Table"
 }
