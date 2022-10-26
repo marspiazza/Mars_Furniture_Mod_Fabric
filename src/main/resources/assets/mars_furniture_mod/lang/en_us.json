@@ -12,5 +12,9 @@
     "block.mars_furniture_mod.mangrove_chair": "Mangrove Chair",
     "block.mars_furniture_mod.mangrove_table": "Mangrove Table",
     "block.mars_furniture_mod.oak_chair": "Oak Chair",
-    "block.mars_furniture_mod.oak_table": "Oak Table"
+    "block.mars_furniture_mod.oak_table": "Oak Table",
+    "block.mars_furniture_mod.spruce_chair": "Spruce Chair",
+    "block.mars_furniture_mod.spruce_table": "Spruce Table",
+    "block.mars_furniture_mod.warped_chair": "Warped Chair",
+    "block.mars_furniture_mod.warped_table": "Warped Table"
 }

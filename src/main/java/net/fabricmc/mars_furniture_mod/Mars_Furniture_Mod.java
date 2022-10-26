@@ -51,6 +51,15 @@ public class Mars_Furniture_Mod implements ModInitializer {
 	public static final ChairBlock OAK_CHAIR = new ChairBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque());
 	public static final TableBlock OAK_TABLE = new TableBlock(FabricBlockSettings.of(Material.WOOD));
 
+	//SPRUCE
+	public static final ChairBlock SPRUCE_CHAIR = new ChairBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque());
+	public static final TableBlock SPRUCE_TABLE = new TableBlock(FabricBlockSettings.of(Material.WOOD));
+
+	//WARPED
+	public static final ChairBlock WARPED_CHAIR = new ChairBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque());
+	public static final TableBlock WARPED_TABLE = new TableBlock(FabricBlockSettings.of(Material.WOOD));
+
+
 
 	@Override
 	public void onInitialize() {
@@ -112,6 +121,22 @@ public class Mars_Furniture_Mod implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier("mars_furniture_mod", "oak_chair"), new BlockItem(OAK_CHAIR, new Item.Settings().group(ItemGroup.DECORATIONS)));
 		BlockRenderLayerMap.INSTANCE.putBlock(Mars_Furniture_Mod.OAK_CHAIR, RenderLayer.getCutout());
 
-		LOGGER.info("Hello Fabric world!");
+		//SPRUCE
+		Registry.register(Registry.BLOCK, new Identifier("mars_furniture_mod", "spruce_table"), SPRUCE_TABLE);
+        Registry.register(Registry.ITEM, new Identifier("mars_furniture_mod", "spruce_table"), new BlockItem(SPRUCE_TABLE, new Item.Settings().group(ItemGroup.DECORATIONS)));
+
+		Registry.register(Registry.BLOCK, new Identifier("mars_furniture_mod", "spruce_chair"), SPRUCE_CHAIR);
+        Registry.register(Registry.ITEM, new Identifier("mars_furniture_mod", "spruce_chair"), new BlockItem(SPRUCE_CHAIR, new Item.Settings().group(ItemGroup.DECORATIONS)));
+		BlockRenderLayerMap.INSTANCE.putBlock(Mars_Furniture_Mod.SPRUCE_CHAIR, RenderLayer.getCutout());
+
+		//WARPED
+		Registry.register(Registry.BLOCK, new Identifier("mars_furniture_mod", "warped_table"), WARPED_TABLE);
+        Registry.register(Registry.ITEM, new Identifier("mars_furniture_mod", "warped_table"), new BlockItem(WARPED_TABLE, new Item.Settings().group(ItemGroup.DECORATIONS)));
+
+		Registry.register(Registry.BLOCK, new Identifier("mars_furniture_mod", "warped_chair"), WARPED_CHAIR);
+        Registry.register(Registry.ITEM, new Identifier("mars_furniture_mod", "warped_chair"), new BlockItem(WARPED_CHAIR, new Item.Settings().group(ItemGroup.DECORATIONS)));
+		BlockRenderLayerMap.INSTANCE.putBlock(Mars_Furniture_Mod.WARPED_CHAIR, RenderLayer.getCutout());
+
+		LOGGER.info("Loading Mars Furniture Mod!");
 	}
 }
