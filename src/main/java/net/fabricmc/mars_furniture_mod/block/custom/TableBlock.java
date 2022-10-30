@@ -33,5 +33,4 @@ public class TableBlock extends Block {
         return TABLE_VOXELS;
     }
 
-    //add in algorithm for leg placement from mcfm later - will have to change the models
 }
