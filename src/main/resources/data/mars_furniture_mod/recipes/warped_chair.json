@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "  P",
+      " PP",
+      " SS"
+    ],
+    "key": {
+      "P": {
+        "item": "minecraft:warped_planks"
+      },
+      "S": {
+        "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "mars_furniture_mod:warped_chair",
+      "count": 2
+    }
+  }

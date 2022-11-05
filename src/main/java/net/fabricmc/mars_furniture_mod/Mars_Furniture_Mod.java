@@ -1,5 +1,8 @@
 package net.fabricmc.mars_furniture_mod;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -12,9 +15,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class Mars_Furniture_Mod implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
