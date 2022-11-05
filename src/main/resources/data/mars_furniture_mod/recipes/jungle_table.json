@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "PPP",
+      "S S",
+      "S S"
+    ],
+    "key": {
+      "P": {
+        "item": "minecraft:jungle_planks"
+      },
+      "S": {
+        "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "mars_furniture_mod:jungle_table",
+      "count": 2
+    }
+  }
